@@ -26,6 +26,7 @@ body{
     text-align: center;
     background-color: var(--card-back-color);
     height: 100%;
+    /*background-color: aquamarine;*/
     transform-style: preserve-3d;
     transition: 300ms ease-in-out;
 }
@@ -52,6 +53,27 @@ body{
 .cartao__conteudo__pergunta p{
     color: var(--text-color);
     font-weight: 500;
+}
+
+.cartao__conteudo_resposta{
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.cartao:hover .cartao__conteudo{
+    transform: rotateY(180deg);
+}
+
+.cartao__conteudo__pergunta
+.cartao__conteudo_resposta{
+    backface-visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.cartao__conteudo_resposta{
+    transform:rotateY(180deg) ;
 }
 
 footer{
